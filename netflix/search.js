@@ -52,8 +52,9 @@ btnsumbit.addEventListener("submit", function(e){
     console.log("composed Uri = " + composedUri);
     if (controleBusca == 1){
         $( "#Name" ).empty();
-        $( "#Idd" ).empty();
+        $( "#Id" ).empty();
         $( "#titleDetails" ).empty();
+        $('#searchError1').hide();
         controleBusca = 0;
         console.log("Busca limpa com sucesso");
     }
@@ -74,6 +75,7 @@ btnsumbit.addEventListener("submit", function(e){
                     $("#myModalSearch").modal("show");
                     $('#searchError1').show();
                 } else {
+                    $('#searchError1').hide();
                     $("#myModalSearch").modal({backdrop: true});
                     $("#myModalSearch").modal("show");
                     $('#searchTable1').show();

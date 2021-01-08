@@ -25,6 +25,7 @@ div.wrapperBackground{
   overflow: hidden;
   object-fit: cover;
   margin: -4% -0% -12% -0px;
+  opacity: 90%;
 }
 .categoriaCarousel{
   color:ivory;

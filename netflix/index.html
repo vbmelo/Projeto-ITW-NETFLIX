@@ -13,10 +13,12 @@
     
         <!--Navbar Top-->
         <nav class="navbar fixed-top navbar-expand-md navbar-dark">
-            <div class="jumbotron-fluid" style="padding-left:0px; padding-right:0px; width: 100%;">
+        
+            <div class="container-fluid" style="padding-left:0px; padding-right:0px; width: 100%;">
+
                 <!--SIDE MENU-->
                 <div class="side_menu" style="font-size:24px;">
-                    <div class="burger_box" style="">
+                    <div class="burger_box" style="margin-top: 23px;">
                         <div class="menu-icon-container">
                             <a href="#" class="menu-icon js-menu_toggle closed">
                                 <span class="menu-icon_box">
@@ -35,29 +37,38 @@
                             <li class="list_item"><a href="favorites.html">My Favorites</a></li>
                         </ul>
                         <div class="spacer_box"><p>This is a spacer box.</p></div>
+                        <p style="font-size:12px">- Projeto Netflix -</p>
+                        <p style="font-size:12px">Victor Melo (101099) & Lucas G. Zanuto (101095)</p>
+                        <p style="font-size:12px">&copy;ITW2020 - Introdução às Tecnologias Web</p>
+                        <p style="font-size:12px"><a href="http://www.ua.pt" title="Universidade de Aveiro" target="_blank">Universidade de Aveiro</a></p>
                     </div>
                 </div>
+                <a class="navbar-brand" href="index.html" title="Netflix"><img
+                    src="https://logodownload.org/wp-content/uploads/2014/10/netflix-logo-2-1.png" height="30" class="d-inline-block align-top" alt="Logo Netflix"
+                    loading="lazy" style="margin-left:75px;">
+                </a>
                 <button class="navbar-toggler" style="float: right;" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <a class="navbar-brand" href="index.html" title="Netflix"><img src="../images/netflixIcon.png" height="30" class="d-inline-block align-top" loading="lazy" style="margin-left: 40px;"></a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-size:24px;">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                        </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="titles.html">Titles</a>
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Titles <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Other</a>
                         </li>
                     </ul>
-                    <form class="form-inline my-2 my-lg-0" id="1stform">
+                    <div class="navbar-nav ml-auto">
+                    <form class="form-inline my-2 my-lg-0" id="1stform" >
                         <input id="forminput"class="form-control mr-sm-2 search-field" type="search" placeholder="Search" aria-label="Search">
-                        <button type="button" class="btn btn-outline-danger my-4 my-sm-0" data-toggle="modal" data-target="#myModalSearchFilter">Search Filters</button>
-                        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
+                        <button type="button" class="btn btn-danger my-4 my-sm-0" data-toggle="modal" data-target="#myModalSearchFilter"  style="background-color: rgba(0,0,0,0); border: 1px solid rgba(220,9,20,0); border-radius: 5px; font-size:20px">Filters</button>
+                        <button class="btn btn-danger my-2 my-sm-0" type="submit" style="margin-left:8px ;background-color: rgba(0,0,0,0); border: 1px solid rgba(220,9,20,0); border-radius: 5px; font-size:20px">Search</button>
                     </form>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -87,7 +98,9 @@
                 </a>
             </div>
             <!--CAROUSEL-->
+            
             <div clas="container">
+                <h3 class="categoriaCarousel"><i class="fa fa-film" aria-hidden="true"></i> New Releases </h3>
                 <div class="carousel">
                     <div class="carousel-row">
                         <div class="carousel-tile" style="background: #46B1C9;">
@@ -122,10 +135,11 @@
             </div>
                         <!--CAROUSEL-->
             <div clas="container">
+                <h3 class="categoriaCarousel"><i class="fa fa-television" aria-hidden="true"></i> Series </h3>
                 <div class="carousel">
                     <div class="carousel-row">
-                        <div class="carousel-tile" style="background: #46B1C9;">
-                        <img class="d-block w-100" src="https://proximonivel.pt/wp-content/uploads/2020/01/the-witcher-netflix-pn.jpg" alt="First slide">
+                        <div class="carousel-tile" style="background: #F2E2D2;">
+                        <img class="d-block w-100" src="https://wallpapercave.com/wp/wp4776421.jpg" alt="Nineth slide">
                         </div>
                         <div class="carousel-tile" style="background: #84C0C6;">
                         <img class="d-block w-100" src="https://www.itl.cat/pngfile/big/27-279863_iron-man-wallpapers-free-download-iron-fist-wallpaper.jpg" alt="Second slide">
@@ -133,23 +147,23 @@
                         <div class="carousel-tile" style="background: #9FB7B9;">
                         <img class="d-block w-100" src="https://getyourcomicon.co.uk/?attachment_id=58581" alt="Third slide">
                         </div>
-                        <div class="carousel-tile" style="background: #BCC1BA;">
-                        <img class="d-block w-100" src="https://cdn.hipwallpaper.com/i/69/38/rLiM8N.jpg" alt="Fourth slide">
+                        <div class="carousel-tile" style="background: #F2E2D2;">
+                        <img class="d-block w-100" src="https://wallpaperaccess.com/full/2010138.jpg" alt="Sixth slide">
                         </div>
                         <div class="carousel-tile" style="background: #F2E2D2;">
                         <img class="d-block w-100" src="https://www.teahub.io/photos/full/42-420721_how-i-met-your-mother-wallpaper.jpg" alt="Fith slide">
                         </div>
                         <div class="carousel-tile" style="background: #F2E2D2;">
-                        <img class="d-block w-100" src="https://wallpaperaccess.com/full/2010138.jpg" alt="Sixth slide">
-                        </div>
-                        <div class="carousel-tile" style="background: #F2E2D2;">
                         <img class="d-block w-100" src="https://images6.alphacoders.com/676/thumb-1920-676015.jpg" alt="Seventh slide">
+                        </div>
+                        <div class="carousel-tile" style="background: #BCC1BA;">
+                        <img class="d-block w-100" src="https://cdn.hipwallpaper.com/i/69/38/rLiM8N.jpg" alt="Fourth slide">
                         </div>
                         <div class="carousel-tile" style="background: #F2E2D2;">
                         <img class="d-block w-100" src="https://cutewallpaper.org/21/netflix-wallpaper/55-Netflix-Wallpapers-Download-at-WallpaperBro.jpg" alt="Eigth slide">
                         </div>
-                        <div class="carousel-tile" style="background: #F2E2D2;">
-                        <img class="d-block w-100" src="https://wallpapercave.com/wp/wp4776421.jpg" alt="Nineth slide">
+                        <div class="carousel-tile" style="background: #46B1C9;">
+                        <img class="d-block w-100" src="https://proximonivel.pt/wp-content/uploads/2020/01/the-witcher-netflix-pn.jpg" alt="First slide">
                         </div>
                     </div>
                 </div>
@@ -252,7 +266,7 @@
 
             
         </div>
-        <!--Navbar Footer-->
+        <!--Navbar Footer
         <nav class="navbar navbar-dark fixed-bottom" role="navigation" id="footer">
             <div class="container">
                 <div class="navbar-text small">&copy;ITW2020 - Introdução às Tecnologias Web - Projeto Netflix - Victor Melo (101099) & Lucas G. Zanuto (101095)</div>
@@ -260,6 +274,7 @@
                     <a href="http://www.ua.pt" title="Universidade de Aveiro" target="_blank">Universidade de Aveiro</a></div>
             </div>
         </nav>
+        -->
     </div>
 
     <script src="search.js"></script>

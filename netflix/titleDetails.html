@@ -30,8 +30,9 @@
                     <div class="px-5">
                         <h2 class="menu_title"><img src="https://logodownload.org/wp-content/uploads/2014/10/netflix-logo-2-1.png" id="netflix-logo-side_menu"></h2>
                         <ul class="list_load">
-                            <li class="list_item"><a href="index.html"><i class="fas fa-servicestack ">Home</i></a></li>
-                            <li class="list_item"><a href="titles.html">Titles</a></li>
+                            <li class="list_item"><a href="index.html">Home</a></li>
+                            <li class="list_item"><a href="titles.html"><i class="fas fa-servicestack ">Titles</i></a></li>
+                            <li class="list_item"><a href="actors.html">Actors</a></li>
                             <li class="list_item"><a href="favorites.html">Favorites</a></li>
                         </ul>
                         <div class="spacer_box"><p>This is a spacer box.</p></div>
@@ -69,9 +70,10 @@
         </nav>
 
 
-<div class="wrapperBackground" >
+<div class="wrapperBackground">
+<div class="wrapper">
     <!--Content-->
-    <div class="container" style="padding-top: 0px; border: 3px solid rgba(229, 9, 20, 0); border-radius:10px; margin-top:95px; background: linear-gradient(270deg, rgba(0,0,0,0.1) 50%, rgba(229,9,20,0.15) 100%);">
+    <div class="container" style="padding-top: 100px; height:100vh;">
         <div class="py-2 mb-3">
             <h2 data-bind="text:name() +' ['+id()+'] - ' + displayName "></h2>
         </div>
@@ -81,7 +83,7 @@
                 <th class="col-md-2">Actors</th>
                 <td class="col-md-10">
                     <div data-bind="foreach: actors">
-                        <div><i class=" fa fa-user-o"></i> <a data-bind="text: Name + '', attr: { href: './actorDetails?id=' + Id }"></a> (<span data-bind="text: Id"></span>)</div>
+                        <div><i class=" fa fa-user-o"></i> <a data-bind="text: Name + '', attr: { href: './actorDetails.html?id=' + Id }"></a> (<span data-bind="text: Id"></span>)</div>
                     </div>
                 </td>
             </tr>
@@ -89,7 +91,7 @@
                 <th class="col-md-2">Categories</th>
                 <td class="col-md-10">
                     <div data-bind="foreach: categories">
-                        <div><i class=" fa fa-bookmark-o"></i> <a data-bind="text: Name + '', attr: { href: './categoryDetails?id=' + Id }"></a> (<span data-bind="text: Id"></span>)</div>
+                        <div><i class=" fa fa-bookmark-o"></i> <a data-bind="text: Name + '', attr: { href: './categoryDetails.html?id=' + Id }"></a> (<span data-bind="text: Id"></span>)</div>
                     </div>
                 </td>
             </tr>
@@ -97,7 +99,7 @@
                 <th class="col-md-2">Countries</th>
                 <td class="col-md-10">
                     <div data-bind="foreach: countries">
-                        <div><i class=" fa fa-flag-o"></i> <a data-bind="text: Name + '', attr: { href: './countryDetails?id=' + Id }"></a> (<span data-bind="text: Id"></span>)</div>
+                        <div><i class=" fa fa-flag-o"></i> <a data-bind="text: Name + '', attr: { href: './countryDetails.html?id=' + Id }"></a> (<span data-bind="text: Id"></span>)</div>
                     </div>
                 </td>
             </tr>
@@ -145,7 +147,7 @@
         <!-- /ko -->
     </div>
 </div>
-
+</div>
             <!-- SERACH -->
                 <!-- SEARCH_MAIN - Modal -->
                     <div class="container">

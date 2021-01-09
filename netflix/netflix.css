@@ -6,13 +6,57 @@ body {
   background-color: #161616;
   color: white;
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
 }
-div.wrapperBackground{
-  /* background: linear-gradient(180deg, rgba(0,0,0,1) 30%, rgba(229,9,20,1) 100%); */
 
-}
+
 
 /* Coisas Gerais */
+div.wrapperBackground{
+	background: linear-gradient(-45deg, #960914, #095eaf);
+	background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100%;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+div.wrapper {
+  background: linear-gradient(90deg, rgba(18,42, 66, .85), rgba(18,42, 66, .5)),url("https://media.istockphoto.com/vectors/movie-vector-seamless-pattern-background-vector-id623760140?k=6&m=623760140&s=170667a&w=0&h=OLs6Owdm7sK7ra_SjzIM1JB_-wDEKK3aNLOZoaRa_q0=");
+  color: #eee;
+  width: 100%;
+  height: 100%;
+  perspective: 5000px;
+  perspective-origin: 50% 50%;
+  animation: animation 300s linear infinite;
+}
+div.wrapper::after{
+  background: rgba(0, 0, 0, 0.2);
+}
+@keyframes animation {
+   100%{
+    background-position:0px -3000px;
+  }
+}
+div.modal-body{
+  background: linear-gradient(90deg, rgba(18,42, 66, .85), rgba(18,42, 66, .5)),url("https://media.istockphoto.com/vectors/movie-vector-seamless-pattern-background-vector-id623760140?k=6&m=623760140&s=170667a&w=0&h=OLs6Owdm7sK7ra_SjzIM1JB_-wDEKK3aNLOZoaRa_q0=");
+  color: #eee;
+  width: 100%;
+  height: 100%;
+  perspective: 5000px;
+  perspective-origin: 50% 50%;
+  animation: animation 300s linear infinite;
+}
+
+
 ::-webkit-scrollbar {
   height: 25px;              /* altura horizontal scrollbar */
   width: 0px;               /* altura vertical scrollbar */
@@ -24,13 +68,39 @@ div.wrapperBackground{
   height: 100%;
   overflow: hidden;
   object-fit: cover;
-  margin: -4% -0% -12% -0px;
+  margin: -10% -0% -20% -0px;
   opacity: 90%;
 }
 .categoriaCarousel{
   color:ivory;
   margin: 15px 40px;
 }
+
+.blurred-box{
+  position: relative;
+  width: 250px;
+  height: 350px;
+  top: calc(50% - 175px);
+  left: calc(50% - 125px);
+  background: inherit;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.blurred-box:after{
+ content: '';
+ width: 300px;
+ height: 300px;
+ background: inherit; 
+ position: absolute;
+ left: -25px;
+ right: 0;
+ top: -25px;  
+ bottom: 0;
+ box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
+ filter: blur(10px);
+}
+
 
 
 /* Coisas da Navbar */
@@ -220,4 +290,81 @@ a,
   color: rgba(229, 9, 20, 0.75);
   font-family: "Lato", sans-serif;
   text-decoration: none;
+}
+
+
+/* CHECKBOX de RADIO ANIMADA */
+
+@keyframes click-wave {
+  0% {
+    height: 40px;
+    width: 40px;
+    opacity: 0.35;
+    position: relative;
+  }
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}
+
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 13.33333px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  transition: all 0.15s ease-out 0s;
+  background: rgba(229,9, 20, 0.1);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+.option-input:hover {
+  background: #202122;
+}
+.option-input:checked {
+  background: #ff0000;
+  border: 1px solid ivory;
+}
+.option-input:checked::before {
+  height: 27px;
+  width: 27px;
+  position: absolute;
+  content: '✔';
+  display: inline-block;
+  font-size: 18px;
+  text-align: center;
+  line-height: 27px;
+}
+.option-input:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: rgba(229,9, 20, 1);
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+.option-input.radio {
+  border-radius: 50%;
+}
+.option-input.radio::after {
+  border-radius: 50%;
 }

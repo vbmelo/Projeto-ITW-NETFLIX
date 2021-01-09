@@ -34,6 +34,7 @@
                         <ul class="list_load">
                             <li class="list_item"><a href="index.html"><i class="fas fa-servicestack ">Home</i></a></li>
                             <li class="list_item"><a href="titles.html">Titles</a></li>
+                            <li class="list_item"><a href="actors.html">Actors</a></li>
                             <li class="list_item"><a href="favorites.html">Favorites</a></li>
                         </ul>
                         <div class="spacer_box"><p>This is a spacer box.</p></div>
@@ -70,7 +71,8 @@
             </div>
         </nav>
 
-    <div class="wrapperBackground">
+<div class="wrapperBackground">
+    <div class="wrapper">
         <!--Content-->
         <div class="jumbotron-fluid">
             <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
@@ -96,7 +98,7 @@
             </div>
             <!--CAROUSEL-->
             
-            <div clas="container">
+            <div clas="container-fluid">
                 <h3 class="categoriaCarousel"><i class="fa fa-film" aria-hidden="true"></i> New Releases </h3>
                 <div class="carousel">
                     <div class="carousel-row">
@@ -165,9 +167,9 @@
                     </div>
                 </div>
             </div>
-
-
-
+        </div>
+</div>
+</div>
 
 
 
@@ -225,27 +227,31 @@
                                         <form class="form-group">
                                         <label for="sel1"  style="font-size:24px;">Filtros:</label>
                                             <div>
-                                                <input type="radio" name="filtro" value="filtro_Titulos" id="filtro_Titulos">
+                                                <input type="radio" class="option-input radio" name="filtro" value="filtro_Titulos" id="filtro_Titulos">
                                                 <label for="filtro_Titulos">Filtrar por Títulos (padrão)</label>
                                             </div>
                                             <div>
-                                                <input type="radio" name="filtro" value="filtro_Filmes" id="filtro_Filmes">
+                                                <input type="radio" class="option-input radio" name="filtro" value="filtro_Filmes" id="filtro_Filmes">
                                                 <label for="filtro_Filmes">Filtrar por Filmes</label>
                                             </div>
                                             <div>
-                                                <input type="radio" name="filtro" value="filtro_Series" id="filtro_Series">
+                                                <input type="radio" class="option-input radio" name="filtro" value="filtro_Series" id="filtro_Series">
                                                 <label for="filtro_Series">Filtrar por Séries</label>
                                             </div>
                                             <div>
-                                                <input type="radio" name="filtro" value="filtro_Categoria" id="filtro_Categoria">
-                                                <label for="filtro_Categoria">Filtrar por Categoria</label>
+                                                <input type="radio" class="option-input radio" name="filtro" value="filtro_Atores" id="filtro_Atores">
+                                                <label for="filtro_Atores">Filtrar por Atores</label>
                                             </div>
                                             <div>
-                                                <input type="radio" name="filtro" value="filtro_Paises" id="filtro_Paises">
+                                                <input type="radio" class="option-input radio" name="filtro" value="filtro_Titulos" id="filtro_Titulos">
+                                                <label for="filtro_Titulos">Filtrar por Títulos (padrão)</label>
+                                            </div>
+                                            <div>
+                                                <input type="radio" class="option-input radio" name="filtro" value="filtro_Paises" id="filtro_Paises">
                                                 <label for="filtro_Paises">Filtrar por Países</label>
                                             </div>
                                             <div>
-                                                <input type="radio" name="filtro" value="filtro_Diretores" id="filtro_Diretores">
+                                                <input type="radio" class="option-input radio" name="filtro" value="filtro_Diretores" id="filtro_Diretores">
                                                 <label for="filtro_Diretores">Filtrar por Diretores</label>
                                             </div>
                                             <div id="log"></div>
@@ -256,23 +262,8 @@
                             </div>
                         </div>
                     </div>
-                
-            
 
-
-
-            
-        </div>
-        <!--Navbar Footer
-        <nav class="navbar navbar-dark fixed-bottom" role="navigation" id="footer">
-            <div class="container">
-                <div class="navbar-text small">&copy;ITW2020 - Introdução às Tecnologias Web - Projeto Netflix - Victor Melo (101099) & Lucas G. Zanuto (101095)</div>
-                <div class="navbar-right navbar-text small d-sm-none d-md-block">
-                    <a href="http://www.ua.pt" title="Universidade de Aveiro" target="_blank">Universidade de Aveiro</a></div>
-            </div>
-        </nav>
-        -->
-    </div>
+     
 
     <script src="search.js"></script>
     <script src="sidemenu.js"></script>

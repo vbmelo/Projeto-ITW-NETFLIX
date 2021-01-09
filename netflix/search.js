@@ -19,6 +19,9 @@ $( "input" ).on( "click", function() {
         case "filtro_Series":
             baseUri = 'http://192.168.160.58/netflix/api/Search/Series?name=';
             break;
+        case "filtro_Atores":
+            baseUri = 'http://192.168.160.58/netflix/api/Search/Actors?name=';
+            break;
         case "filtro_Categoria":
             baseUri = 'http://192.168.160.58/netflix/api/Search/Categories?name=';
             break;

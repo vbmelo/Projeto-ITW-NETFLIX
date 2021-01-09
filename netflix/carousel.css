@@ -6,7 +6,7 @@
     --carousel-tile-height:  calc(var(--carousel-tile-width) / (16 / 9));
 
     /* Growth Factor */
-    --carousel-growth-factor: 1.25;
+    --carousel-growth-factor: 1.3;
 
     /* Fade to Opacity */
     --carousel-fade-opacity:   0.25;

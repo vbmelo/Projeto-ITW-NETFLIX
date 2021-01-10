@@ -34,6 +34,7 @@
                             <li class="list_item"><a href="titles.html"><i class="fas fa-servicestack ">Titles</i></a></li>
                             <li class="list_item"><a href="actors.html">Actors</a></li>
                             <li class="list_item"><a href="countries.html">Countries</a></li>
+                            <li class="list_item"><a href="Ratings.html">Ratings</a></li>
                             <li class="list_item"><a href="favorites.html">Favorites</a></li>
                         </ul>
                         <div class="spacer_box"><p>This is a spacer box.</p></div>
@@ -100,7 +101,7 @@
                 <th class="col-md-2">Countries</th>
                 <td class="col-md-10">
                     <div data-bind="foreach: countries">
-                        <div><i class=" fa fa-flag-o"></i> <a data-bind="text: Name + '', attr: { href: './countryDetails.html?id=' + Id }"></a> (<span data-bind="text: Id"></span>)</div>
+                        <div><i class=" fa fa-flag-o"></i> <a data-bind="text: Name + '', attr: { href: './countriesDetails.html?id=' + Id }"></a> (<span data-bind="text: Id"></span>)</div>
                     </div>
                 </td>
             </tr>
@@ -116,7 +117,7 @@
                 <th class="col-md-2">Directors</th>
                 <td class="col-md-10">
                     <div data-bind="foreach: directors">
-                        <div><i class=" fa fa-user-o"></i> <a data-bind="text: Name + '', attr: { href: './directorDetails?id=' + Id }"></a> (<span data-bind="text: Id"></span>)</div>
+                        <div><i class=" fa fa-user-o"></i> <a data-bind="text: Name + '', attr: { href: './directorDetails.html?id=' + Id }"></a> (<span data-bind="text: Id"></span>)</div>
                     </div>
                 </td>
             </tr>
@@ -128,7 +129,7 @@
                 <th class="col-md-2">Rating</th>
                 <td class="col-md-10">
                     <div data-bind="foreach: rating">
-                        <div><i class=" fa fa-star-o"></i> <a data-bind="text: Code + '', attr: { href: './ratingDetails?id=' + Id }"></a> (<span data-bind="text: Id"></span>)</div>
+                        <div><i class=" fa fa-star-o"></i> <a data-bind="text: Code + '', attr: { href: './ratingDetails.html?id=' + Id }"></a> (<span data-bind="text: Id"></span>)</div>
                     </div>
                 </td>
             </tr>
@@ -140,7 +141,7 @@
                 <th class="col-md-2">Type</th>
                 <td class="col-md-10">
                     <div data-bind="foreach: type">
-                        <div><i class=" fa fa-address-book-o"></i> <a data-bind="text: Name + '', attr: { href: './typeDetails?id=' + Id }"></a> (<span data-bind="text: Id"></span>)</div>
+                        <div><i class=" fa fa-address-book-o"></i> <a data-bind="text: Name + '', attr: { href: './typeDetails.html?id=' + Id }"></a> (<span data-bind="text: Id"></span>)</div>
                     </div>
                 </td>
             </tr>

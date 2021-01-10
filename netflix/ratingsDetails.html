@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Titles - Netflix</title>
+    <title>Ratings - Netflix</title>
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
     <link href="../Content/font-awesome.min.css" rel="stylesheet" />
     <link href="netflix.css" rel="stylesheet" />
@@ -78,53 +78,16 @@
         <div class="border-bottom pt-4 pb-2 mb-3">
             <h2 data-bind="text:displayName"></h2>
         </div>
-        <!-- ko if:records().length > 0 -->
-        <div class="col-12 small">
-            <div class="row">
-                <p class="mr-auto pt-2">
-                    <span data-bind="html: 'Page: ' + currentPage() + ' of ' + totalPages()"></span><br />
-                    <span
-                        data-bind="html: 'Titles: '+ fromRecord() + '-' + toRecord() + ' of ' + totalRecords()"></span>
-                </p>
-                <div class="my-0 pt-3">
-                    <ul class="pagination">
-                        <!-- ko if: currentPage() > 5 && totalPages() > 10 -->
-                        <li class="page-item"><a class="page-link" title="First Page"
-                                data-bind="attr: { href: './titles.html?page=' + '1',  rel:'prev'}">⇤</a></li>
-                        <li class="page-item"><a class="page-link" title="Previous Page"
-                                data-bind="attr: { href: './titles.html?page=' + previousPage(),  rel:'prev'}">←</a>
-                        </li>
-                        <!-- /ko -->
-                        <!-- ko foreach: pageArray()-->
-                        <!-- ko if:$data == $parent.currentPage() -->
-                        <li class="active page-item"><a class="page-link"
-                                data-bind="attr: { title:'Current Page ' + $data }, text: $data"></a></li>
-                        <!-- /ko -->
-                        <!-- ko if:$data != $parent.currentPage() -->
-                        <li class="page-item"><a class="page-link"
-                                data-bind="attr: { href: './titles.html?page=' + $data, title:'Goto Page ' + $data }, text:$data"></a>
-                        </li>
-                        <!-- /ko -->
-                        <!-- /ko -->
-                        <!-- ko if: currentPage() < totalPages() - 4 && totalPages() > 9 -->
-                        <li class="page-item"><a class="page-link" title="Next Page"
-                                data-bind="attr: { href: './titles.html?page=' + nextPage(), rel:'next' }">→</a></li>
-                        <li class="page-item"><a class="page-link" title="Last Page"
-                                data-bind="attr: { href: './titles.html?page=' + totalPages() }">⇥</a></li>
-                        <!-- /ko -->
-                    </ul>
-                </div>
-            </div>
+        <div class="clearfix">
+            <h2> Rating: <span data-bind="text:codigo"></span></h2>
+            <h2> Target audience: <span data-bind="text:alvo"></span></h2>
+            <h4> Description: <span data-bind="text:desc"></span></h4>
         </div>
-        <!-- /ko -->
-        <div class="clearfix"></div>
         <table class="table table-striped table-sm small" style="color:ivory;">
             <thead>
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Title</th>
-                    <th scope="col">date</th>
-                    <th scope="col">Type</th>
+                    <th scope="col">Title</th>      
                     <th scope="col" class="text-right"></th>
                 </tr>
             </thead>
@@ -132,8 +95,6 @@
                 <tr>
                     <td data-bind="text:Id"></td>
                     <td data-bind="text:Name"></td>
-                    <td data-bind="text:ReleaseYear"></td>
-                    <td data-bind="text:TypeName"></td>
                     <td class="text-right">
                         <a class="btn  btn-sm" data-bind="attr: { href:'./titleDetails.html?id=' + Id }">
                             <i class="fa fa-eye" title="Selecione para ver detalhes"></i>
@@ -271,7 +232,7 @@
     <script src="../Scripts/jquery-3.5.1.min.js"></script>
     <script src="../Scripts/bootstrap.bundle.min.js"></script>
     <script src="../Scripts/knockout-3.5.1.js"></script>
-    <script src="titles.js"></script>
+    <script src="ratingsDetails.js"></script>
 </body>
 
 </html>

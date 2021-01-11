@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Actors Details - Netflix</title>
+    <title>Directors Details - Netflix</title>
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
     <link href="../Content/font-awesome.min.css" rel="stylesheet" />
     <link href="netflix.css" rel="stylesheet" />
@@ -34,7 +34,8 @@
                         <ul class="list_load">
                             <li class="list_item"><a href="index.html">Home</a></li>
                             <li class="list_item"><a href="titles.html">Titles</a></li>
-                            <li class="list_item"><a href="actors.html"><i class="fas fa-servicestack ">Actors</i></a></li>
+                            <li class="list_item"><a href="actors.html">Actors</a></li>
+                            <li class="list_item"><a href="directors.html"><i class="fas fa-servicestack ">Directors</i></a></li>
                             <li class="list_item"><a href="countries.html">Countries</a></li>
                             <li class="list_item"><a href="Ratings.html">Ratings</a></li>
                             <li class="list_item"><a href="favorites.html">Favorites</a></li>
@@ -62,7 +63,10 @@
                             <a class="nav-link" href="titles.html">Titles</a></a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="actors.html">Actors Details<span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="actors.html">Actors </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="directors.html">Director Details <span class="sr-only">(current)</span></a>
                         </li>
                     </ul>
                     <div class="navbar-nav ml-auto">
@@ -86,7 +90,7 @@
         <!-- ko if:name().length > 0 -->
         <table class="table table-striped table-sm small" style="color: white; font-size: 14px;">
             <tr class="row">
-                <th class="col-md-2">Actor - Id</th>
+                <th class="col-md-2">Director - Id</th>
                 <td class="col-md-10" data-bind="text: id"></td>
             </tr>
             <tr class="row">
@@ -218,7 +222,7 @@
     <script src="../Scripts/jquery-3.5.1.min.js"></script>
     <script src="../Scripts/bootstrap.bundle.min.js"></script>
     <script src="../Scripts/knockout-3.5.1.js"></script>
-	<script src="actorDetails.js"></script>
+    <script src="directorsDetails.js"></script>
     
 </body>
 

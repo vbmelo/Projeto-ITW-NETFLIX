@@ -35,6 +35,7 @@
                             <li class="list_item"><a href="index.html">Home</a></li>
                             <li class="list_item"><a href="titles.html">Titles</a></li>
                             <li class="list_item"><a href="actors.html">Actors</a></li>
+                            <li class="list_item"><a href="directors.html">Directors</a></li>
                             <li class="list_item"><a href="countries.html">Countries</a></li>
                             <li class="list_item"><a href="Ratings.html">Ratings</a></li>
                             <li class="list_item"><a href="Categories.html"><i class="fas fa-servicestack ">Categories</i></a></li>
@@ -94,7 +95,7 @@
                         <tbody data-bind="foreach: Categories">
                             <tr>
                                 <td data-bind="text:Id"></td>
-                                <td><a data-bind="text:Name, attr: { href:'countriesDetails.html?id=' + Id }" style="color:  wheat;"></a></td>
+                                <td><a data-bind="text:Name, attr: { href:'categoryDetails.html?id=' + Id }" style="color:  wheat;"></a></td>
                                 <td data-bind="text:Titles" style="text-align: center;"></td>
                                 <td class="text-right">
                                     <a class="btn  btn-sm"

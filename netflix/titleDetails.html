@@ -33,8 +33,10 @@
                             <li class="list_item"><a href="index.html">Home</a></li>
                             <li class="list_item"><a href="titles.html"><i class="fas fa-servicestack ">Titles</i></a></li>
                             <li class="list_item"><a href="actors.html">Actors</a></li>
+                            <li class="list_item"><a href="directors.html">Directors</a></li>
                             <li class="list_item"><a href="countries.html">Countries</a></li>
                             <li class="list_item"><a href="Ratings.html">Ratings</a></li>
+                            <li class="list_item"><a href="categories.html">Categories</a></li>
                             <li class="list_item"><a href="favorites.html">Favorites</a></li>
                         </ul>
                         <div class="spacer_box"><p>This is a spacer box.</p></div>
@@ -117,7 +119,7 @@
                 <th class="col-md-2">Directors</th>
                 <td class="col-md-10">
                     <div data-bind="foreach: directors">
-                        <div><i class=" fa fa-user-o"></i> <a data-bind="text: Name + '', attr: { href: './directorDetails.html?id=' + Id }"></a> (<span data-bind="text: Id"></span>)</div>
+                        <div><i class=" fa fa-user-o"></i> <a data-bind="text: Name + '', attr: { href: './directorsDetails.html?id=' + Id }"></a> (<span data-bind="text: Id"></span>)</div>
                     </div>
                 </td>
             </tr>

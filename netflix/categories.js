@@ -112,5 +112,10 @@ var vm = function () {
     else {
         self.activate(pg);
     }
+    
 };
+$(document).ready(function () {
+    console.log("ready!");
+    ko.applyBindings(new vm());
+});
 

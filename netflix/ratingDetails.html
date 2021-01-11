@@ -90,7 +90,9 @@
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
-                        <th scope="col">Title</th>      
+                        <th scope="col">Title</th>    
+                        <th scope="col">Year</th>   
+                        <th scope="col">Type</th>
                         <th scope="col" class="text-right"></th>
                     </tr>
                 </thead>
@@ -98,6 +100,8 @@
                     <tr>
                         <td data-bind="text:Id"></td>
                         <td data-bind="text:Name"></td>
+						<td data-bind="text:ReleaseYear"></td>
+						<td data-bind="text:TypeName"></td>
                         <td class="text-right">
                             <a class="btn  btn-sm" data-bind="attr: { href:'./titleDetails.html?id=' + Id }">
                                 <i class="fa fa-eye" title="Selecione para ver detalhes"></i>

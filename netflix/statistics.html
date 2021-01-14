@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8" />
-    <title>Directors - Netflix</title>
-    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <title>Statistics - Netflix</title>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" /> <!--Bootstrap v4.5.3-->
     <link href="../Content/font-awesome.min.css" rel="stylesheet" />
     <link href="netflix.css" rel="stylesheet" />
+    <link href="carousel.css" rel="stylesheet" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
-
 <body>
+    <div id="SearchIdentifier" style="display:none;">titles</div>
         <!--Navbar Top-->
         <nav class="navbar fixed-top navbar-expand-md navbar-dark">
         
@@ -31,17 +31,18 @@
                     </div>
                     <div class="px-5">
                         <h2 class="menu_title"><img src="https://logodownload.org/wp-content/uploads/2014/10/netflix-logo-2-1.png" id="netflix-logo-side_menu"></h2>
-                        <ul class="list_load">
-                            <li class="list_item"><a href="index.html">Home</a></li>
-                            <li class="list_item"><a href="titles.html">Titles</a></li>
-                            <li class="list_item"><a href="actors.html">Actors</a></li>
-                            <li class="list_item"><a href="directors.html"><i class="fas fa-servicestack ">Directors</i></a></li>
-                            <li class="list_item"><a href="countries.html">Countries</a></li>
-                            <li class="list_item"><a href="Ratings.html">Ratings</a></li>
-                            <li class="list_item"><a href="categories.html">Categories</a></li>
-                            <li class="list_item"><a href="favorites.html">Favorites</a></li>
+                        <ul class="list_load"style="font-size:20px;">
+                            <li class="list_item"><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                            <li class="list_item"><a href="titles.html"><i class="fa fa-television" aria-hidden="true"></i> Titles</a></li>
+                            <li class="list_item"><a href="actors.html"><i class="fa fa-star" aria-hidden="true"></i> Actors</a></li>
+                            <li class="list_item"><a href="directors.html"><i class="fa fa-video-camera" aria-hidden="true"></i> Directors</a></li>
+                            <li class="list_item"><a href="countries.html"><i class="fa fa-globe" aria-hidden="true"></i> Countries</a></li>
+                            <li class="list_item"><a href="Ratings.html"><i class="fa fa-star-half-o" aria-hidden="true"></i> Ratings</a></li>
+                            <li class="list_item"><a href="categories.html"><i class="fa fa-th-list" aria-hidden="true"></i> Categories</a></li>
+                            <li class="list_item"><a href="favorites.html"><i class="fa fa-heart-o" aria-hidden="true"></i> Favorites</a></li>
+                            <li class="list_item"><a href="statistics.html"><i class="fa fa-bar-chart" aria-hidden="true"></i> <i class="fas fa-servicestack "> Statistics </i></a></li>
                         </ul>
-                        <div class="spacer_box"><p>This is a spacer box.</p></div>
+                        <div class="spacer_box"></div>
                         <p style="font-size:12px">- Projeto Netflix -</p>
                         <p style="font-size:12px">Victor Melo (101099) & Lucas G. Zanuto (101095)</p>
                         <p style="font-size:12px">&copy;ITW2020 - Introdução às Tecnologias Web</p>
@@ -61,107 +62,65 @@
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="titles.html">Titles</a></a>
+                            <a class="nav-link" href="titles.html">Titles </a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="directors.html">Directors <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="index.html">Statistics <i class="fa fa-bar-chart" aria-hidden="true"></i><span class="sr-only">(current)</span></a>
                         </li>
                     </ul>
                     <div class="navbar-nav ml-auto">
                     <form class="form-inline my-2 my-lg-0" id="1stform" >
                         <input id="forminput"class="form-control mr-sm-2 search-field" type="search" placeholder="Search" aria-label="Search">
-                        <button type="button" class="btn btn-danger my-4 my-sm-0" data-toggle="modal" data-target="#myModalSearchFilter"  style="background-color: rgba(0,0,0,0); border: 1px solid rgba(220,9,20,0); border-radius: 5px; font-size:20px">Filters</button>
-                        <button class="btn btn-danger my-2 my-sm-0" type="submit" style="margin-left:8px ;background-color: rgba(0,0,0,0); border: 1px solid rgba(220,9,20,0); border-radius: 5px; font-size:20px">Search</button>
+                        <button class="btn btn-danger my-2 my-sm-0" type="submit" style="margin-left:8px ;background-color: rgba(0,0,0,0); border: 1px solid rgba(220,9,20,0); border-radius: 5px; font-size:20px"> <i class="fa fa-search" aria-hidden="true"></i></button>
+                        <button type="button" class="btn btn-danger my-4 my-sm-0" data-toggle="modal" data-target="#myModalSearchFilter"  style="background-color: rgba(0,0,0,0); border: 1px solid rgba(220,9,20,0); border-radius: 5px; font-size:20px"><i class="fa fa-filter" aria-hidden="true"></i></button>
                     </form>
                     </div>
                 </div>
             </div>
         </nav>
 
-    
 <div class="wrapperBackground">
-<div class="wrapper">
-    <div class="container" style="padding-top:150px;">
-                    <div class="container">
-                        <!-- ko if:Directors().length > 0 -->
-                        <!-- /ko -->
-                        <div class="clearfix"></div>
-                        <table class="table table-striped table-sm small" style="color: white; font-size: 14px;">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Director - ID</th>
-                                    <th scope="col">Director - Name</th>
-                                    <th scope="col" style="text-align: center;">Nº de Titles</th>
-                                    <th scope="col" class="text-right"></th>
-                                </tr>
-                            </thead>
-                            <tbody data-bind="foreach: Directors">
-                                <tr>
-                                    <td data-bind="text:Id"></td>
-                                    <td data-bind="text:Name"></td>
-                                    <td data-bind="text:Titles" style="text-align: center;"></td>
-                                    <td class="text-right">
-                                        <a class="btn  btn-sm"
-                                            data-bind="attr: { href:'./directorsDetails.html?id=' + Id }">
-                                            <i class="fa fa-eye" style="font-size: 14px;"
-                                                title="Selecione para ver detalhes"></i>
-                                        </a>
-                                        <!--  <button class="btn btn-sm addfav" >
-                                           <i class="fa fa-heart-o" id="showme" style="font-size: 14px;" onclick="addfav(event)" data-bind="attr : { 'id': 'favourite_'+Id }" title="Selecione para adicionar aos favoritos"></i>
-                                        </button> -->
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="col-12 small">
-                            <div class="row">
-                                <p class="mr-auto pt-2">
-                                    <span
-                                        data-bind="html: 'Page: ' + currentPage() + ' of ' + totalPages()"></span><br />
-                                    <span
-                                        data-bind="html: 'Titles: '+ fromRecord() + '-' + toRecord() + ' of ' + TotalDirectors()"></span>
-                                </p>
-                                <div class="my-0 pt-3">
-                                    <ul class="pagination">
-                                        <!-- ko if: currentPage() > 5 && totalPages() > 10 -->
-                                        <li class="page-item"><a class="page-link" title="First Page"
-                                                data-bind="attr: { href: './directors.html?page=' + '1',  rel:'prev'}">⇤</a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" title="Previous Page"
-                                                data-bind="attr: { href: './directors.html?page=' + previousPage(),  rel:'prev'}">←</a>
-                                        </li>
-                                        <!-- /ko -->
-                                        <!-- ko foreach: pageArray()-->
-                                        <!-- ko if:$data == $parent.currentPage() -->
-                                        <li class="active page-item"><a class="page-link"
-                                                data-bind="attr: { title:'Current Page ' + $data }, text: $data"></a>
-                                        </li>
-                                        <!-- /ko -->
-                                        <!-- ko if:$data != $parent.currentPage() -->
-                                        <li class="page-item"><a class="page-link"
-                                                data-bind="attr: { href: './directors.html?page=' + $data, title:'Goto Page ' + $data }, text:$data"></a>
-                                        </li>
-                                        <!-- /ko -->
-                                        <!-- /ko -->
-                                        <!-- ko if: currentPage() < totalPages() - 4 && totalPages() > 9 -->
-                                        <li class="page-item"><a class="page-link" title="Next Page"
-                                                data-bind="attr: { href: './directors.html?page=' + nextPage(), rel:'next' }">→</a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" title="Last Page"
-                                                data-bind="attr: { href: './directors.html?page=' + totalPages() }">⇥</a>
-                                        </li>
-                                        <!-- /ko -->
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+    <div class="wrapper">
+        <!--Content-->
+        <div class="container-fluid" style="padding-top:30vh; padding-left:10%; padding-right:10%">
+            <div class="card-deck">
+                <div class="card">
+                    <img class="card-img-top" src="https://img.icons8.com/pastel-glyph/2x/theatre-mask.png" alt="Card image cap">
+                    <div class="card-body">
+                    <h5 class="card-title">Actors: <span id="data_Actors"> <span></h5>
                     </div>
-
-
-
-
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="https://image.flaticon.com/icons/png/512/31/31257.png" alt="Card image cap">
+                    <div class="card-body">
+                    <h5 class="card-title">Titles: <span id="data_Titles"> <span></h5>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="https://lh5.googleusercontent.com/proxy/thUhRA1KclZUqQABSrz9v4lUKLqI1XmDw3BFJTCFDw8fWCD3EXwjozp_TmyLurDDCZ7rGH19pWdnGhTH95nWDHMGTydv2ZAGzkGGdn6pxGVZ=s0-d" alt="Card image cap">
+                    <div class="card-body">
+                    <h5 class="card-title">Categories: <span id="data_Categories"> <span></h5>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="https://image.flaticon.com/icons/png/512/28/28319.png" alt="Card image cap">
+                    <div class="card-body">
+                    <h5 class="card-title">Directors: <span id="data_Directors"> <span></h5>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="https://icon-library.com/images/earth-icon-png/earth-icon-png-0.jpg" alt="Card image cap">
+                    <div class="card-body">
+                    <h5 class="card-title">Countries: <span id="data_Countries"> <span></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
 </div>
 </div>
+
+
+
 
 <!-- SEARCH -->
     <!-- SEARCH_MAIN - Modal -->
@@ -216,31 +175,31 @@
                             <label for="sel1"  style="font-size:24px;">Filtros:</label>
                                 <div>
                                     <input type="radio" class="option-input radio" name="filtro" value="filtro_Titulos" id="filtro_Titulos">
-                                    <label for="filtro_Titulos">Filtrar por Títulos (padrão)</label>
+                                    <label id="texto_filtro_titles" for="filtro_Titulos">Filtrar por Títulos (padrão)</label>
                                 </div>
                                 <div>
                                     <input type="radio" class="option-input radio" name="filtro" value="filtro_Filmes" id="filtro_Filmes">
-                                    <label for="filtro_Filmes">Filtrar por Filmes</label>
+                                    <label id="texto_filtro_movies" for="filtro_Filmes">Filtrar por Filmes</label>
                                 </div>
                                 <div>
                                     <input type="radio" class="option-input radio" name="filtro" value="filtro_Series" id="filtro_Series">
-                                    <label for="filtro_Series">Filtrar por Séries</label>
+                                    <label id="texto_filtro_series" for="filtro_Series">Filtrar por Séries</label>
                                 </div>
                                 <div>
                                     <input type="radio" class="option-input radio" name="filtro" value="filtro_Atores" id="filtro_Atores">
-                                    <label for="filtro_Atores">Filtrar por Atores</label>
+                                    <label id="texto_filtro_actors" for="filtro_Atores">Filtrar por Atores</label>
                                 </div>
                                 <div>
                                     <input type="radio" class="option-input radio" name="filtro" value="filtro_Categoria" id="filtro_Categoria">
-                                    <label for="filtro_Categoria">Filtrar por Categoria</label>
+                                    <label id="texto_filtro_categories" for="filtro_Categoria">Filtrar por Categoria</label>
                                 </div>
                                 <div>
                                     <input type="radio" class="option-input radio" name="filtro" value="filtro_Paises" id="filtro_Paises">
-                                    <label for="filtro_Paises">Filtrar por Países</label>
+                                    <label id="texto_filtro_countries" for="filtro_Paises">Filtrar por Países</label>
                                 </div>
                                 <div>
                                     <input type="radio" class="option-input radio" name="filtro" value="filtro_Diretores" id="filtro_Diretores">
-                                    <label for="filtro_Diretores">Filtrar por Diretores</label>
+                                    <label id="texto_filtro_directors" for="filtro_Diretores">Filtrar por Diretores</label>
                                 </div>
                                 <div id="log"></div>
                             </form>
@@ -251,31 +210,14 @@
             </div>
         </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header bg-dark text-light" style="background: linear-gradient(rgba(0, 0, 0, 1), rgba(229, 9, 20, 1));">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        <img src="../images/netflixIcon.png" height="30" /> Loading data...
-                    </h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body text-center">
-                    <i class="fa fa-spin fa-3x fa-refresh"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <script src="sidemenu.js"></script>
-    <script src="search.js"></script>
+     
+
     <script src="../Scripts/jquery-3.5.1.min.js"></script>
     <script src="../Scripts/bootstrap.bundle.min.js"></script>
     <script src="../Scripts/knockout-3.5.1.js"></script>
-    <script src="directors.js"></script>
+    <script src="search.js"></script>
+    <script src="sidemenu.js"></script>
+    <script src="search.js"></script>
+    <script src="statistics.js"></script>
 </body>
-
 </html>

@@ -134,9 +134,17 @@ div.modal-body{
 .search-field::placeholder{
   color: ivory;
 }
+.card{
+  background: linear-gradient(-45deg, #960914, #095eaf);
+	background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
 
 
 /* MENUBAR LATERAL ========= */
+.spacer_box{
+  margin-top:30vh;
+}
 #netflix-logo-side_menu {
   height: 90%;
   width: 90%;

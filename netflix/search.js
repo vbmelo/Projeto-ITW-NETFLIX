@@ -9,6 +9,93 @@ var controleBusca = 0;
 var searchName="";
 var searchId="";
 var searchDetails="";
+var searchIdentifier = $("#SearchIdentifier").text();
+console.log("Search Identifier = " + searchIdentifier );
+var controleIdentifier = 0; 
+
+switch(searchIdentifier) {
+    case 'titles':
+        baseUri = 'http://192.168.160.58/netflix/api/Search/Titles?name=';
+        baseDetailsUri = './titleDetails.html?id=';
+        searchName="Title Name";
+        searchId="Title Id";
+        searchDetails="Title Details";
+        $('#texto_filtro_titles').append(' <span id="identifierPadrao">(Padrão Da Página)</span>');
+        console.log("Search Identifier Padrao Da Pagina = " + searchIdentifier );
+        controleIdentifier += 1;
+        $('#forminput').attr("placeholder", "Search for Titles");
+        break;
+    case "movies":
+        baseUri = 'http://192.168.160.58/netflix/api/Search/Movies?name=';
+        baseDetailsUri = './moviesDetails.html?id=';
+        searchName="Movie Name";
+        searchId="Movie Id";
+        searchDetails="Movie Details";
+        $('#texto_filtro_movies').append(' <span id="identifierPadrao">(Padrão Da Página)</span>');
+        console.log("Search Identifier Padrao Da Pagina = " + searchIdentifier );
+        controleIdentifier += 1;
+        $('#forminput').attr("placeholder", "Search for Movies");
+        break;
+    case "series":
+        baseUri = 'http://192.168.160.58/netflix/api/Search/Series?name=';
+        baseDetailsUri = './seriesDetails.html?id=';
+        searchName="Series Name";
+        searchId="Series Id";
+        searchDetails="Series Details";
+        $('#texto_filtro_series').append(' <span id="identifierPadrao">(Padrão Da Página)</span>');
+        console.log("Search Identifier Padrao Da Pagina = " + searchIdentifier );
+        controleIdentifier += 1;
+        $('#forminput').attr("placeholder", "Search for Series");
+        break;
+    case "actors":
+        baseUri = 'http://192.168.160.58/netflix/api/Search/Actors?name=';
+        baseDetailsUri = './actorDetails.html?id=';
+        searchName="Actor Name";
+        searchId="Actor Id";
+        searchDetails="Actor Details";
+        $('#texto_filtro_actors').append(' <span id="identifierPadrao">(Padrão Da Página)</span>');
+        console.log("Search Identifier Padrao Da Pagina = " + searchIdentifier );
+        controleIdentifier += 1;
+        $('#forminput').attr("placeholder", "Search for Actors");
+        break;
+    case "categories":
+        baseUri = 'http://192.168.160.58/netflix/api/Search/Categories?name=';
+        baseDetailsUri = './categoriesDetails.html?id=';
+        searchName="Categoria Name";
+        searchId="Category Id";
+        searchDetails="Category Details";
+        $('#texto_filtro_categories').append(' <span id="identifierPadrao">(Padrão Da Página)</span>');
+        console.log("Search Identifier Padrao Da Pagina = " + searchIdentifier );
+        controleIdentifier += 1;
+        $('#forminput').attr("placeholder", "Search for Categories");
+        break;
+    case "countries":
+        baseUri = 'http://192.168.160.58/netflix/api/Search/Countries?name=';
+        baseDetailsUri = './countriesDetails.html?id=';
+        searchName="Country Name";
+        searchId="Country Id";
+        searchDetails="Country Details";
+        $('#texto_filtro_countries').append(' <span id="identifierPadrao">(Padrão Da Página)</span>');
+        console.log("Search Identifier Padrao Da Pagina = " + searchIdentifier );
+        controleIdentifier += 1;
+        $('#forminput').attr("placeholder", "Search for Countries");
+        break;
+    case "directors":
+        baseUri = 'http://192.168.160.58/netflix/api/Search/Directors?name=';
+        baseDetailsUri = './directorsDetails.html?id=';
+        searchName="Director Name";
+        searchId="Director Id";
+        searchDetails="Director Details";
+        $('#texto_filtro_directors').append(' <span id="identifierPadrao">(Padrão Da Página)</span>');
+        console.log("Search Identifier Padrao Da Pagina = " + searchIdentifier );
+        controleIdentifier += 1;
+        $('#forminput').attr("placeholder", "Search for Directors");
+        break;
+}
+if (controleIdentifier > 1){
+    $('identifierPadrao').delete();
+    controleIdentifier = 1;
+}
 
 $( "input" ).on( "click", function() {
     $( "#log" ).html( $( "input:checked" ).val() + " Foi Selecionado Para Busca!" );
@@ -21,6 +108,7 @@ $( "input" ).on( "click", function() {
             searchName="Title Name";
             searchId="Title Id";
             searchDetails="Title Details";
+            $('#forminput').attr("placeholder", "Search for Titles");
             break;
         case "filtro_Filmes":
             baseUri = 'http://192.168.160.58/netflix/api/Search/Movies?name=';
@@ -28,6 +116,7 @@ $( "input" ).on( "click", function() {
             searchName="Movie Name";
             searchId="Movie Id";
             searchDetails="Movie Details";
+            $('#forminput').attr("placeholder", "Search for Movies");
             break;
         case "filtro_Series":
             baseUri = 'http://192.168.160.58/netflix/api/Search/Series?name=';
@@ -35,6 +124,7 @@ $( "input" ).on( "click", function() {
             searchName="Series Name";
             searchId="Series Id";
             searchDetails="Series Details";
+            $('#forminput').attr("placeholder", "Search for Series");
             break;
         case "filtro_Atores":
             baseUri = 'http://192.168.160.58/netflix/api/Search/Actors?name=';
@@ -42,6 +132,7 @@ $( "input" ).on( "click", function() {
             searchName="Actor Name";
             searchId="Actor Id";
             searchDetails="Actor Details";
+            $('#forminput').attr("placeholder", "Search for Actors");
             break;
         case "filtro_Categoria":
             baseUri = 'http://192.168.160.58/netflix/api/Search/Categories?name=';
@@ -49,6 +140,7 @@ $( "input" ).on( "click", function() {
             searchName="Categoria Name";
             searchId="Category Id";
             searchDetails="Category Details";
+            $('#forminput').attr("placeholder", "Search for Categories");
             break;
         case "filtro_Paises":
             baseUri = 'http://192.168.160.58/netflix/api/Search/Countries?name=';
@@ -56,6 +148,7 @@ $( "input" ).on( "click", function() {
             searchName="Country Name";
             searchId="Country Id";
             searchDetails="Country Details";
+            $('#forminput').attr("placeholder", "Search for Countries");
             break;
         case "filtro_Diretores":
             baseUri = 'http://192.168.160.58/netflix/api/Search/Directors?name=';
@@ -63,6 +156,7 @@ $( "input" ).on( "click", function() {
             searchName="Director Name";
             searchId="Director Id";
             searchDetails="Director Details";
+            $('#forminput').attr("placeholder", "Search for Directors");
             break;
     }
     console.log("Base Uri = "+baseUri);
@@ -85,13 +179,6 @@ btnsumbit.addEventListener("submit", function(e){
     console.log(inputed.value);
     var inputedSearch = inputed.value;
     inputed.value.replace(/\s+/g, '');
-    if (baseUri==""){
-        baseUri = 'http://192.168.160.58/netflix/api/Search/Titles?name=';
-        baseDetailsUri = './titleDetails.html?id=';
-        searchName="Title Name";
-        searchId="Title Id";
-        searchDetails="Title Details";
-    }
     var composedUri = baseUri + inputedSearch;
     console.log("composed Uri = " + composedUri);
     if (controleBusca == 1){

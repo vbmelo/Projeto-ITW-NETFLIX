@@ -89,7 +89,7 @@
                     <img src="https://cdn.hipwallpaper.com/i/69/38/rLiM8N.jpg" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                    <img src="https://proximonivel.pt/wp-content/uploads/2020/01/the-witcher-netflix-pn.jpg" class="d-block w-100" alt="...">
+                    <img src="https://proximonivel.pt/wp-content/uploads/2020/01/the-witcher-netflix-pn.jpg" class="d-block w-100" alt="The Witcher" id="80189685">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
@@ -104,35 +104,35 @@
             <!--CAROUSEL-->
             
             <div clas="container-fluid">
-                <h3 class="categoriaCarousel"><i class="fa fa-film" aria-hidden="true"></i> New Releases </h3>
+                <h3 class="categoriaCarousel"><i class="fa fa-film" aria-hidden="true"></i> Most Watched </h3>
                 <div class="carousel">
                     <div class="carousel-row">
                         <div class="carousel-tile" style="background: #46B1C9;">
-                        <img class="d-block w-100" src="https://proximonivel.pt/wp-content/uploads/2020/01/the-witcher-netflix-pn.jpg" alt="First slide">
+                        <img name="contentIMG" class="d-block w-100" onclick="carouselDetails(this)" src="https://1.bp.blogspot.com/-e5sc8_rA4Xo/W8Y_DDyb_PI/AAAAAAAAcuw/i-sMixPvJ14Jad_ta4rhBGIGu9j4BSpSACLcBGAs/s1600/adam-sandler-100-fresh.jpg" alt="Adam Sandler 100% Fresh" id="80224536">
                         </div>
                         <div class="carousel-tile" style="background: #84C0C6;">
-                        <img class="d-block w-100" src="https://www.itl.cat/pngfile/big/27-279863_iron-man-wallpapers-free-download-iron-fist-wallpaper.jpg" alt="Second slide">
+                        <img name="contentIMG" class="d-block w-100" onclick="carouselDetails(this)" src="https://proximonivel.pt/wp-content/uploads/2020/01/the-witcher-netflix-pn.jpg" alt="The Witcher" id="80189685">
+                        </div>
+                        <div class="carousel-tile" style="background: #F2E2D2;">
+                        <img name="contentIMG" class="d-block w-100" onclick="carouselDetails(this)" src="https://wallpapercave.com/wp/wp4015218.jpg" alt="Ferris Bueller's Day Off" id="498716">
+                        </div>
+                        <div class="carousel-tile" style="background: #F2E2D2;">
+                        <img name="contentIMG" class="d-block w-100" onclick="carouselDetails(this)" src="https://www.itl.cat/pngfile/big/46-467685_peaky-blinders-wallpaper-hd.png" alt="Peaky Blinders" id="80002479">
+                        </div>
+                        <div class="carousel-tile" style="background: #F2E2D2;">
+                        <img name="contentIMG" class="d-block w-100" onclick="carouselDetails(this)" src="https://vistapointe.net/images/that-70s-show-wallpaper-3.jpg" alt="That '70s Show" id="70155610">
+                        </div>
+                        <div class="carousel-tile" style="background: #F2E2D2;">
+                        <img name="contentIMG" class="d-block w-100" onclick="carouselDetails(this)" src="https://wallpaperaccess.com/full/3418539.jpg" alt="Click" id="70041162">
+                        </div>
+                        <div class="carousel-tile" style="background: #F2E2D2;">
+                        <img name="contentIMG" class="d-block w-100" onclick="carouselDetails(this)" src="https://wallpaperaccess.com/full/825394.jpg" alt="Stranger Things" id="80057281">
                         </div>
                         <div class="carousel-tile" style="background: #9FB7B9;">
-                        <img class="d-block w-100" src="https://getyourcomicon.co.uk/?attachment_id=58581" alt="Third slide">
+                        <img name="contentIMG" class="d-block w-100" onclick="carouselDetails(this)" src="https://getyourcomicon.co.uk/?attachment_id=58581" alt="Lucifer" id="80057918">
                         </div>
                         <div class="carousel-tile" style="background: #BCC1BA;">
-                        <img class="d-block w-100" src="https://cdn.hipwallpaper.com/i/69/38/rLiM8N.jpg" alt="Fourth slide">
-                        </div>
-                        <div class="carousel-tile" style="background: #F2E2D2;">
-                        <img class="d-block w-100" src="https://www.teahub.io/photos/full/42-420721_how-i-met-your-mother-wallpaper.jpg" alt="Fith slide">
-                        </div>
-                        <div class="carousel-tile" style="background: #F2E2D2;">
-                        <img class="d-block w-100" src="https://wallpaperaccess.com/full/2010138.jpg" alt="Sixth slide">
-                        </div>
-                        <div class="carousel-tile" style="background: #F2E2D2;">
-                        <img class="d-block w-100" src="https://images6.alphacoders.com/676/thumb-1920-676015.jpg" alt="Seventh slide">
-                        </div>
-                        <div class="carousel-tile" style="background: #F2E2D2;">
-                        <img class="d-block w-100" src="https://cutewallpaper.org/21/netflix-wallpaper/55-Netflix-Wallpapers-Download-at-WallpaperBro.jpg" alt="Eigth slide">
-                        </div>
-                        <div class="carousel-tile" style="background: #F2E2D2;">
-                        <img class="d-block w-100" src="https://wallpapercave.com/wp/wp4776421.jpg" alt="Nineth slide">
+                        <img name="contentIMG" class="d-block w-100" onclick="carouselDetails(this)" src="https://cdn.hipwallpaper.com/i/69/38/rLiM8N.jpg" alt="Marvel's Daredevil" id="80018294">
                         </div>
                     </div>
                 </div>
@@ -177,6 +177,97 @@
 </div>
 
 
+<!--Content Detail MODAL-->
+        <div class="container">
+            <div class="modal fade in" id="myModalContent" role="dialog" style="display: none; background: linear-gradient(rgba(0, 0, 0, 1)1%, rgba(229, 9, 20, 0.1)); ">
+                <div class="modal-dialog modal-lg" style="width:100%;">
+                    <div class="modal-content" style="border: 0px solid rgba(229, 9, 20, 1); border-radius:7px;">
+                        <div class="modal-header"style="color: Ivory; background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(229,9,20,1) 0%); border: 0px solid rgba(0,0,0,0);">
+                            <h2 class="modal-title" id="nome_Conteudo"></h2>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                    <div class="modal-body" style="background-color: black;" >
+                        <div class="container">
+                            <h2 style="display: none; font-size: 18px;" id="contentError1">Desculpe, nenhum conteúdo para o título foi encontrado</h2>
+                                
+                                <div class="py-2 mb-3">
+                                    <h2 data-bind="text:name() +' ['+id()+'] - ' + displayName "></h2>
+                                </div>
+                                <!-- ko if:name().length > 0 -->
+                                <table class="table table-striped table-sm small"style="color:ivory;">
+                                    <tr class="row">
+                                        <th class="col-md-2">Actors</th>
+                                        <td class="col-md-10">
+                                            <div data-bind="foreach: actors">
+                                                <div><i class=" fa fa-user-o"></i> <a data-bind="text: Name + '', attr: { href: './actorDetails.html?id=' + Id }"></a> (<span data-bind="text: Id"></span>)</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="row">
+                                        <th class="col-md-2">Categories</th>
+                                        <td class="col-md-10">
+                                            <div data-bind="foreach: categories">
+                                                <div><i class=" fa fa-bookmark-o"></i> <a data-bind="text: Name + '', attr: { href: './categoryDetails.html?id=' + Id }"></a> (<span data-bind="text: Id"></span>)</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="row">
+                                        <th class="col-md-2">Countries</th>
+                                        <td class="col-md-10">
+                                            <div data-bind="foreach: countries">
+                                                <div><i class=" fa fa-flag-o"></i> <a data-bind="text: Name + '', attr: { href: './countriesDetails.html?id=' + Id }"></a> (<span data-bind="text: Id"></span>)</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="row">
+                                        <th class="col-md-2">Date Added</th>
+                                        <td class="col-md-10" data-bind="text: dateAdded"></td>
+                                    </tr>
+                                    <tr class="row">
+                                        <th class="col-md-2">Description</th>
+                                        <td class="col-md-10" data-bind="text: description"></td>
+                                    </tr>
+                                    <tr class="row">
+                                        <th class="col-md-2">Directors</th>
+                                        <td class="col-md-10">
+                                            <div data-bind="foreach: directors">
+                                                <div><i class=" fa fa-user-o"></i> <a data-bind="text: Name + '', attr: { href: './directorsDetails.html?id=' + Id }"></a> (<span data-bind="text: Id"></span>)</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="row">
+                                        <th class="col-md-2">Duration</th>
+                                        <td class="col-md-10" data-bind="text: duration"></td>
+                                    </tr>
+                                    <tr class="row">
+                                        <th class="col-md-2">Rating</th>
+                                        <td class="col-md-10">
+                                            <div data-bind="foreach: rating">
+                                                <div><i class=" fa fa-star-o"></i> <a data-bind="text: Code + '', attr: { href: './ratingDetails.html?id=' + Id }"></a> (<span data-bind="text: Id"></span>)</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="row">
+                                        <th class="col-md-2">Release Year</th>
+                                        <td class="col-md-10" data-bind="text: releaseYear"></td>
+                                    </tr>
+                                    <tr class="row">
+                                        <th class="col-md-2">Type</th>
+                                        <td class="col-md-10">
+                                            <div data-bind="foreach: type">
+                                                <div><i class=" fa fa-address-book-o"></i> <a data-bind="text: Name + '', attr: { href: './typeDetails.html?id=' + Id }"></a> (<span data-bind="text: Id"></span>)</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- /ko -->
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
 
 <!-- SEARCH -->
@@ -185,7 +276,7 @@
             <div class="modal fade in" id="myModalSearch" role="dialog" style="display: none; background: linear-gradient(rgba(0, 0, 0, 1)1%, rgba(229, 9, 20, 0.1)); ">
                 <div class="modal-dialog modal-lg" style="width:100%;">
                     <!-- Modal content-->
-                    <div class="modal-content" style="border: 1px solid rgba(229, 9, 20, 1); border-radius:7px;">
+                    <div class="modal-content" style="border: 0px solid rgba(229, 9, 20, 1); border-radius:7px;">
                         <div class="modal-header"style="color: Ivory; background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(229,9,20,1) 0%); border: 0px solid rgba(0,0,0,0);">
                             <h2 class="modal-title">Resultados da Busca</h2>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -221,9 +312,9 @@
             <div class="modal fade in" id="myModalSearchFilter" role="dialog" style="display: none; background: linear-gradient(rgba(0, 0, 0, 1)1%, rgba(229, 9, 20, 0.1)); ">
                 <div class="modal-dialog modal-lg" style="width:100%;">
                     <!-- Modal content-->
-                    <div class="modal-content" style="border: 1px solid rgba(229, 9, 20, 1); border-radius:7px;">
+                    <div class="modal-content" style="border: 0px solid rgba(229, 9, 20, 1); border-radius:7px;">
                         <div class="modal-header" style="color: Ivory; background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(229,9,20,1) 0%); border: 0px solid rgba(0,0,0,0);">
-                            <h2 class="modal-title">Selecione os filtros para a busca personalizada</h2>
+                            <h2 class="modal-title">Selecione um filtro para uma busca personalizada</h2>
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
                     <div class="modal-body" style="background-color: black;" >
@@ -232,7 +323,7 @@
                             <label for="sel1"  style="font-size:24px;">Filtros:</label>
                                 <div>
                                     <input type="radio" class="option-input radio" name="filtro" value="filtro_Titulos" id="filtro_Titulos">
-                                    <label id="texto_filtro_titles" for="filtro_Titulos">Filtrar por Títulos (padrão)</label>
+                                    <label id="texto_filtro_titles" for="filtro_Titulos">Filtrar por Títulos</label>
                                 </div>
                                 <div>
                                     <input type="radio" class="option-input radio" name="filtro" value="filtro_Filmes" id="filtro_Filmes">
@@ -266,14 +357,12 @@
                 </div>
             </div>
         </div>
-
-     
-
     <script src="../Scripts/jquery-3.5.1.min.js"></script>
     <script src="../Scripts/bootstrap.bundle.min.js"></script>
     <script src="../Scripts/knockout-3.5.1.js"></script>
     <script src="search.js"></script>
     <script src="sidemenu.js"></script>
     <script src="search.js"></script>
+    <script src="content.js"></script>
 </body>
 </html>

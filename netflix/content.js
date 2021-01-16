@@ -1,6 +1,23 @@
 var titleId = null ;
+var controleModal = 0;
+function limpar() {
+    self.actors = ko.observableArray('');
+    self.categories = ko.observableArray('');
+    self.countries = ko.observableArray('');
+    self.dateAdded = ko.observable('');
+    self.description = ko.observable('');
+    self.directors = ko.observableArray('');
+    self.duration = ko.observable('');
+    self.id = ko.observable('');
+    self.name = ko.observable('');
+    self.rating = ko.observable('');
+    self.releaseYear = ko.observable('');
+    self.type = ko.observable('');
+    console.log('limpo com sucesso!');
+}
 function carouselDetails(elem) {
     console.log("CarouselDetails foi INVOCADA");
+    
     var contentIMG_ID = $(elem).attr("id");
     console.log("id da imagem clicada = "+ contentIMG_ID);
     var contentIMG_NAME = $(elem).attr("alt");
@@ -11,10 +28,12 @@ function carouselDetails(elem) {
 
      if($("#myModalContent").is(":hidden")){
          $("#nome_Conteudo").empty();
+            limpar();
      }
     $("#myModalContent").modal({backdrop: true});
     $("#myModalContent").modal("show");
     $("#nome_Conteudo").append("Mais Sobre: " + contentIMG_NAME);
+    controleModal = 1;
 } 
 
 // ViewModel KnockOut
@@ -47,7 +66,7 @@ var vm = function () {
     getTitle = function()   {
         console.log('CALL: getTitle...');
         var composedUri = self.baseUri() + titleId;
-        console.log(composedUri)
+        console.log(composedUri);
         ajaxHelper(composedUri, 'GET').done(function (data) {
             console.log(data);
             self.actors(data.Actors);
@@ -92,20 +111,7 @@ var vm = function () {
             $("#myModal").modal('hide');
         });
     }
-    function limpar() {
-        self.actors = ko.observableArray('');
-        self.categories = ko.observableArray('');
-        self.countries = ko.observableArray('');
-        self.dateAdded = ko.observable('');
-        self.description = ko.observable('');
-        self.directors = ko.observableArray('');
-        self.duration = ko.observable('');
-        self.id = ko.observable('');
-        self.name = ko.observable('');
-        self.rating = ko.observable('');
-        self.releaseYear = ko.observable('');
-        self.type = ko.observable('');
-    }
+    
 };
 
 $(document).ready(function () {

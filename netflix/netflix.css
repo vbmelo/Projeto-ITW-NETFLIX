@@ -69,7 +69,7 @@ div.modal-body{
   height: 100%;
   overflow: hidden;
   object-fit: cover;
-  margin: -10% -0% -10% -0px;
+  margin: -15% -0% -3% -0px;
   opacity: 90%;
 }
 .categoriaCarousel{
@@ -349,4 +349,10 @@ a,
 }
 .option-input.radio::after {
   border-radius: 50%;
+}
+
+/* ultimos ajustes */
+
+.list_load{
+  font-size:20px;
 }
